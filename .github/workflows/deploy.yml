@@ -40,10 +40,9 @@ jobs:
       - name: Assemble static GitHub Pages bundle
         run: |
           mkdir -p _site
-          cp -r web_pwa/* _site/
+          cp index.html styles.css app.js manifest.webmanifest sw.js .nojekyll _site/
           mkdir -p _site/assets
           cp -r assets/* _site/assets/
-          touch _site/.nojekyll
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3

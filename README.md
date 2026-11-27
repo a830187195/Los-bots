@@ -4,7 +4,7 @@ Plataforma inclusiva **Offline-First** para democratizar el acceso a trámites o
 
 1. **Aplicación Python de Escritorio y Ejecutable Windows (`MiTramiteJusto.exe`)** — `main.py`, `MiTramiteJusto.spec`, `ejecutar_app.bat`, `compilar_ejecutable_exe.bat`.
 2. **Aplicación Móvil Android Instalable (`.apk`)** — `buildozer.spec` + compilación automática en `.github/workflows/build-apk.yml`.
-3. **Web PWA Estática Offline-First para GitHub Pages** — `web_pwa/` + `abrir_pwa_web.bat` + despliegue automático en `.github/workflows/deploy.yml`.
+3. **Web PWA Estática Offline-First para GitHub Pages** — `index.html` (en la raíz) + `abrir_pwa_web.bat` + despliegue automático en `.github/workflows/deploy.yml`.
 
 > **Manual completo paso a paso (instalables Windows, uso en Antigravity y subida a GitHub):** consulta [MANUAL_INSTALACION_Y_GITHUB.md](MANUAL_INSTALACION_Y_GITHUB.md).
 
@@ -13,7 +13,7 @@ Plataforma inclusiva **Offline-First** para democratizar el acceso a trámites o
 ## Inicio Rápido
 
 ### 1. Probar en 1 clic sin instalar nada (Web PWA)
-Haz doble clic en **`abrir_pwa_web.bat`** (o abre `web_pwa/index.html` en Chrome/Edge).
+Haz doble clic en **`abrir_pwa_web.bat`** (o abre `index.html` en Chrome/Edge).
 
 ### 2. Instalar entorno Python, correr pruebas y abrir app Python
 ```bat
@@ -41,6 +41,6 @@ Consulta la **Parte 3 y Parte 4** de [MANUAL_INSTALACION_Y_GITHUB.md](MANUAL_INS
 | `src/layer2_edge_ai/` | Motor FSM (`fsm_engine.py`), privacidad y redacción PII en RAM (`privacy.py`), OCR local (`ocr_pipeline.py`), simplificador burocrático (`document_interpreter.py`) y traductor dual (`translation_engine.py`). |
 | `src/layer3_persistence/` | Llave segura (`keystore.py`), SQLite/SQLCipher AES-256-GCM (`database.py`), paquetes `.mtjpack` SHA-256 + Delta (`package_manager.py`) y cola con backoff exponencial (`sync_queue.py`). |
 | `src/layer4_cloud/` y `src/platform_android/` | Cliente TLS 1.3 con Certificate Pinning y puentes Android (`TextToSpeech`, `RecognizerIntent`, `MediaPlayer`, Cámara, Conectividad y ML Kit). |
-| `web_pwa/` | Versión Web PWA 100% estática con Service Worker (`sw.js`), `IndexedDB`, `<canvas>` local, Web Speech API y navegación por hash (`#home`, `#translator`, `#scanner`, `#offline`, `#guide`). |
+| `index.html`, `app.js`, `styles.css`, `sw.js` | Versión Web PWA 100% estática en la raíz con Service Worker (`sw.js`), `IndexedDB`, `<canvas>` local, Web Speech API y navegación por hash (`#home`, `#translator`, `#scanner`, `#offline`, `#guide`). |
 | `assets/` | Logotipo oficial, paquetes lingüísticos desacoplados (`nah_puebla.json`, `tot_sierra.json`), 4 trámites completos (`acta_nacimiento`, `curp_tramite`, `imss_afiliacion`, `pension_adulto_mayor`) y pictogramas SVG. |
 | `tests/` | Suite unitaria e integración (`pytest -v`). |

@@ -54,7 +54,7 @@ Para trabajar cómodamente con el proyecto en Python y GitHub, instala estos **3
 ## Parte 2: Cómo probar la aplicación paso a paso en tu equipo
 
 ### Opción A — Prueba inmediata sin instalar nada (Web PWA)
-1. En la carpeta `C:\Users\Ivanna\Desktop\Hackaton`, haz **doble clic en `abrir_pwa_web.bat`** (o abre `web_pwa/index.html` en Chrome/Edge).
+1. En la carpeta del proyecto, haz **doble clic en `abrir_pwa_web.bat`** (o abre `index.html` en Chrome/Edge).
 2. Podrás probar los 4 módulos: **Lenguas Originarias**, **Leer Documento**, **Modo Sin Conexión** y **Guía Paso a Paso**.
 
 ### Opción B — Ejecutar la aplicación Python nativa (Kivy)
@@ -118,9 +118,9 @@ Al hacer `git push`, GitHub ejecutará automáticamente **3 workflows** incluido
 2. **Descargar el `.exe` para Windows (`build-windows-exe.yml`):**
    - En la misma pestaña **Actions** → **Build Windows Executable (.exe)** → descarga **`mi-tramite-justo-windows-exe`**.
 
-3. **Publicar la Web PWA en GitHub Pages (`deploy.yml`):**
+3. **Publicar la Web PWA en GitHub Pages (`index.html` en raíz o `deploy.yml`):**
    - En tu repositorio de GitHub ve a **Settings → Pages**.
-   - En **Build and deployment → Source**, selecciona **GitHub Actions**.
+   - En **Build and deployment → Source**, puedes elegir **Deploy from a branch** (`main` / `/ (root)`) directamente desde `index.html`, o **GitHub Actions** para usar `.github/workflows/deploy.yml`.
    - Vuelve a **Actions → Deploy Web PWA to GitHub Pages → Run workflow** (o haz un nuevo `git push`).
    - GitHub te dará el enlace público/privado (`https://tu-usuario.github.io/mi-tramite-justo/`) instalable desde Chrome en Android como PWA (*"Agregar a la pantalla principal"*).
 
