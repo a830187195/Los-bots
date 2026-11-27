@@ -1,0 +1,109 @@
+{
+  "lang_code": "tot_sierra",
+  "display_name": "Totonaco (Sierra / Papantla)",
+  "variant_region": "Puebla - Veracruz",
+  "version": "1.0.0",
+  "validation_status": "demo_pendiente_validacion_comunitaria",
+  "entries": [
+    {
+      "entry_id": "tot_001",
+      "spanish": "Buenos días, vengo a mi trámite.",
+      "spanish_simple": "Buenos días, vengo a hacer mi trámite.",
+      "indigenous_text": "Tlan kotsis, ikmin ki trámite",
+      "phonetic_guide": "Tlan ko-tsis, ik-min ki tra-mi-te",
+      "domain_tag": "saludo",
+      "audio_clip": "assets/audio/tot_001.opus",
+      "keywords": ["buenos dias", "vengo", "tramite", "saludo", "hola"]
+    },
+    {
+      "entry_id": "tot_002",
+      "spanish": "Necesito ayuda para entender este documento.",
+      "spanish_simple": "Por favor ayúdeme a entender este papel.",
+      "indigenous_text": "Kimpaskaniyau kakmakgxtakgti uma papil",
+      "phonetic_guide": "Kim-pas-ka-ni-yau kak-makgsh-takg-ti u-ma pa-pil",
+      "domain_tag": "ventanilla",
+      "audio_clip": "assets/audio/tot_002.opus",
+      "keywords": ["ayuda", "entender", "documento", "papel", "leer"]
+    },
+    {
+      "entry_id": "tot_003",
+      "spanish": "¿Dónde está la ventanilla de atención?",
+      "spanish_simple": "¿En qué ventanilla me atienden?",
+      "indigenous_text": "¿Nichu wilh niku kintamakgxtakgkan?",
+      "phonetic_guide": "Ni-chu wilh ni-ku kin-ta-makgsh-takg-kan",
+      "domain_tag": "ventanilla",
+      "audio_clip": "assets/audio/tot_003.opus",
+      "keywords": ["donde", "ventanilla", "oficina", "atencion"]
+    },
+    {
+      "entry_id": "tot_004",
+      "spanish": "Traigo mi acta de nacimiento en original y copia.",
+      "spanish_simple": "Traigo mi acta de nacimiento original y una copia.",
+      "indigenous_text": "Iklhmin ki acta de nacimiento xla xlikana chu akgtum copia",
+      "phonetic_guide": "Ik-lhmin ki ak-ta shla shli-ka-na chu akg-tum ko-pia",
+      "domain_tag": "identidad",
+      "audio_clip": "assets/audio/tot_004.opus",
+      "keywords": ["acta", "nacimiento", "original", "copia"]
+    },
+    {
+      "entry_id": "tot_005",
+      "spanish": "Aquí está mi credencial oficial y mi CURP.",
+      "spanish_simple": "Aquí está mi credencial INE y mi CURP.",
+      "indigenous_text": "Unu wilh ki credencial chu ki CURP",
+      "phonetic_guide": "U-nu wilh ki kre-den-sial chu ki kurp",
+      "domain_tag": "identidad",
+      "audio_clip": "assets/audio/tot_005.opus",
+      "keywords": ["credencial", "ine", "curp", "identificacion"]
+    },
+    {
+      "entry_id": "tot_006",
+      "spanish": "Tengo cita médica en la clínica del IMSS.",
+      "spanish_simple": "Tengo cita con el doctor en la clínica del IMSS.",
+      "indigenous_text": "Ikgalhi cita nak pukuchinan IMSS",
+      "phonetic_guide": "Ik-ga-lhi si-ta nak pu-ku-chi-nan IMSS",
+      "domain_tag": "salud",
+      "audio_clip": "assets/audio/tot_006.opus",
+      "keywords": ["cita", "medica", "imss", "clinica", "doctor"]
+    },
+    {
+      "entry_id": "tot_007",
+      "spanish": "¿Cuánto tengo que pagar o es gratuito?",
+      "spanish_simple": "¿Este trámite cuesta dinero o es gratis?",
+      "indigenous_text": "¿Nikgama nakxtakgni o ni lakgchan tumin?",
+      "phonetic_guide": "Ni-kga-ma naksh-takg-ni o ni lakg-chan tu-min",
+      "domain_tag": "pago",
+      "audio_clip": "assets/audio/tot_007.opus",
+      "keywords": ["cuanto", "pagar", "costo", "gratis", "gratuito", "derechos"]
+    },
+    {
+      "entry_id": "tot_008",
+      "spanish": "Necesito una persona intérprete en mi lengua.",
+      "spanish_simple": "Necesito que alguien hable mi idioma para ayudarme.",
+      "indigenous_text": "Iklakaskin chatum tiku xkachin kintachiuin",
+      "phonetic_guide": "Ik-la-kas-kin cha-tum ti-ku shka-chin kin-ta-chi-win",
+      "domain_tag": "ventanilla",
+      "audio_clip": "assets/audio/tot_008.opus",
+      "keywords": ["interprete", "traductor", "lengua", "idioma", "totonaco"]
+    },
+    {
+      "entry_id": "tot_009",
+      "spanish": "Vengo a solicitar la pensión para adulto mayor.",
+      "spanish_simple": "Vengo a pedir el apoyo de pensión para adulto mayor.",
+      "indigenous_text": "Ikmin ikskini makgtayan tumin xla kolhonin",
+      "phonetic_guide": "Ik-min iks-ki-ni makg-ta-yan tu-min shla ko-lho-nin",
+      "domain_tag": "pago",
+      "audio_clip": "assets/audio/tot_009.opus",
+      "keywords": ["pension", "adulto", "mayor", "apoyo", "bienestar"]
+    },
+    {
+      "entry_id": "tot_010",
+      "spanish": "Muchas gracias, ¿qué día regreso por mi papel?",
+      "spanish_simple": "Muchas gracias, ¿cuándo regreso a recoger mi documento?",
+      "indigenous_text": "Paxkatkatsini, ¿tukuy kilhtamaku naiktaspita ki papil?",
+      "phonetic_guide": "Pash-kat-ka-tsi-ni, tu-kuy kilh-ta-ma-ku naik-tas-pi-ta ki pa-pil",
+      "domain_tag": "saludo",
+      "audio_clip": "assets/audio/tot_010.opus",
+      "keywords": ["gracias", "cuando", "regreso", "recoger", "dia"]
+    }
+  ]
+}

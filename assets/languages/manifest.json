@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0.0",
+  "note": "Arquitectura de Idiomas Desacoplada: agregue nuevos archivos JSON aquí sin recompilar la app.",
+  "available_packs": [
+    "nah_puebla",
+    "tot_sierra"
+  ]
+}

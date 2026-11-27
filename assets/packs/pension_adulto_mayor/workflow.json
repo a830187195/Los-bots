@@ -1,0 +1,102 @@
+{
+  "pack_id": "pension_adulto_mayor",
+  "title": "Pensión Bienestar Adulto Mayor",
+  "category": "Programas Sociales",
+  "version": "1.0.0",
+  "estimated_time": "40 a 75 minutos",
+  "cost_summary": "100% Gratuito — Apoyo bimestral directo",
+  "initial_state": "S01",
+  "states": [
+    {
+      "state_id": "S01",
+      "step_number": 1,
+      "title": "Reunir Papeles (65 años o más)",
+      "citizen_instruction": "Prepara identificación INE, Acta de Nacimiento, CURP recién impresa, comprobante de domicilio y teléfono de contacto.",
+      "pictogram_id": "documents",
+      "checklist_items": [
+        "Identificación oficial vigente (INE, INAPAM o Pasaporte)",
+        "Acta de nacimiento legible",
+        "CURP de impresión reciente",
+        "Comprobante de domicilio (máximo 6 meses)",
+        "Número de teléfono celular o de un familiar de confianza"
+      ],
+      "translations": {
+        "nah_puebla": "Xiksentili moINE, motlakatilis amatl, moCURP uan amatl kanin tichanti.",
+        "tot_sierra": "Katsokgo mi INE, acta, CURP chu papil niku wilat."
+      },
+      "audio_script_es": "Paso uno: Reunir papeles para la pensión de adulto mayor. Prepara tu credencial INE o INAPAM, acta de nacimiento, CURP reciente, comprobante de domicilio y un número de teléfono.",
+      "next_transition": {
+        "target_state": "S02",
+        "condition": "checklist_complete",
+        "label": "Ya tengo mis papeles"
+      },
+      "prev_state": null,
+      "is_terminal": false
+    },
+    {
+      "state_id": "S02",
+      "step_number": 2,
+      "title": "Ubicar Módulo de Bienestar",
+      "citizen_instruction": "Elige el módulo de registro de Bienestar más cercano o solicita visita domiciliaria si tienes dificultad para caminar.",
+      "pictogram_id": "office_map",
+      "checklist_items": [],
+      "office_options": [
+        "Módulo Bienestar Puebla Centro / Parque Juárez",
+        "Módulo Comunitario Sierra Norte / Centro Integrador",
+        "Solicitud de Visita Domiciliaria (por movilidad limitada)"
+      ],
+      "translations": {
+        "nah_puebla": "Xitlapehpeni módulo Bienestar tlen okachi nechka oso visita ichan.",
+        "tot_sierra": "Kalakpuwanti módulo Bienestar nema tlakg lakatsu."
+      },
+      "audio_script_es": "Paso dos: Ubicar módulo. Selecciona el Centro Integrador más cercano. Si no puedes trasladarte, puedes pedir una visita a tu casa.",
+      "next_transition": {
+        "target_state": "S03",
+        "condition": "office_selected",
+        "label": "Confirmar módulo"
+      },
+      "prev_state": "S01",
+      "is_terminal": false
+    },
+    {
+      "state_id": "S03",
+      "step_number": 3,
+      "title": "Entregar Copias y Recibir Folio",
+      "citizen_instruction": "Entrega las copias en mesa de atención, verifica tu teléfono y pide tu comprobante verde de registro (gratis).",
+      "pictogram_id": "window_officer",
+      "checklist_items": [
+        "Entregué mis copias y recibí mi talón de folio sellado"
+      ],
+      "translations": {
+        "nah_puebla": "Xiktemaka itekopio uan xikselis mofolio tlen registro.",
+        "tot_sierra": "Kamaxki copias chu kamakglhtiti mi folio xla registro."
+      },
+      "audio_script_es": "Paso tres: Entregar copias y recibir folio. Guarda muy bien el talón de registro con tu número de folio para recoger tu tarjeta.",
+      "next_transition": {
+        "target_state": "S04",
+        "condition": "payment_or_exempt",
+        "label": "Tengo mi folio de registro"
+      },
+      "prev_state": "S02",
+      "is_terminal": false
+    },
+    {
+      "state_id": "S04",
+      "step_number": 4,
+      "title": "Finalizar Registro",
+      "citizen_instruction": "Espera el aviso en tu teléfono para recoger tu tarjeta en el Banco del Bienestar. ¡Trámite completado!",
+      "pictogram_id": "check_done",
+      "checklist_items": [
+        "Guardé mi talón de registro en lugar seguro"
+      ],
+      "translations": {
+        "nah_puebla": "Xikchia motlahtol ipan teléfono para tikselis motarjeta. ¡Kuali tlamik!",
+        "tot_sierra": "Kapaktini nak teléfono para namakglhtiya mi tarjeta. ¡Tlan lakgchilh!"
+      },
+      "audio_script_es": "Paso cuatro: Finalizar registro. Tu solicitud quedó lista. Cuando te llamen por teléfono, acude con tu talón y tu credencial por tu tarjeta.",
+      "next_transition": null,
+      "prev_state": "S03",
+      "is_terminal": true
+    }
+  ]
+}

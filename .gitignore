@@ -1,0 +1,33 @@
+# Entornos virtuales y Python
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Datos locales sensibles y salidas temporales (Privacy by Design)
+.local_data/
+*.db
+*.db-shm
+*.db-wal
+.mtj_keystore*.bin
+
+# Compilados locales (.exe, .apk, Buildozer, PyInstaller)
+build/
+dist/
+bin/
+.buildozer/
+dist_packs/
+_site/
+
+# Editores y Sistema Operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

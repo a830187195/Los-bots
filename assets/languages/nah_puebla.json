@@ -1,0 +1,109 @@
+{
+  "lang_code": "nah_puebla",
+  "display_name": "Náhuatl (Sierra Norte de Puebla)",
+  "variant_region": "Puebla / Sierra Norte",
+  "version": "1.0.0",
+  "validation_status": "demo_pendiente_validacion_comunitaria",
+  "entries": [
+    {
+      "entry_id": "nah_001",
+      "spanish": "Buenos días, vengo a mi trámite.",
+      "spanish_simple": "Buenos días, vengo a hacer mi trámite.",
+      "indigenous_text": "Niltze, nika' notlahtol",
+      "phonetic_guide": "Nil-tse, ni-ka no-tlaj-tol",
+      "domain_tag": "saludo",
+      "audio_clip": "assets/audio/nah_001.opus",
+      "keywords": ["buenos dias", "vengo", "tramite", "saludo", "hola"]
+    },
+    {
+      "entry_id": "nah_002",
+      "spanish": "Necesito ayuda para entender este documento.",
+      "spanish_simple": "Por favor ayúdeme a entender este papel.",
+      "indigenous_text": "Xinechpalehui ma nikmati tlen kihtoa inin amatl",
+      "phonetic_guide": "Shi-nech-pa-le-wi ma nik-ma-ti tlen kij-to-a i-nin a-matl",
+      "domain_tag": "ventanilla",
+      "audio_clip": "assets/audio/nah_002.opus",
+      "keywords": ["ayuda", "entender", "documento", "papel", "leer"]
+    },
+    {
+      "entry_id": "nah_003",
+      "spanish": "¿Dónde está la ventanilla de atención?",
+      "spanish_simple": "¿En qué ventanilla me atienden?",
+      "indigenous_text": "¿Kanin kahki in tekichihualoyan?",
+      "phonetic_guide": "Ka-nin kaj-ki in te-ki-chi-wa-lo-yan",
+      "domain_tag": "ventanilla",
+      "audio_clip": "assets/audio/nah_003.opus",
+      "keywords": ["donde", "ventanilla", "oficina", "atencion"]
+    },
+    {
+      "entry_id": "nah_004",
+      "spanish": "Traigo mi acta de nacimiento en original y copia.",
+      "spanish_simple": "Traigo mi acta de nacimiento original y una copia.",
+      "indigenous_text": "Nikualika notlakatilis amatl tlen melahuak uan se itekopio",
+      "phonetic_guide": "Ni-kua-li-ka no-tla-ka-ti-lis a-matl",
+      "domain_tag": "identidad",
+      "audio_clip": "assets/audio/nah_004.opus",
+      "keywords": ["acta", "nacimiento", "original", "copia"]
+    },
+    {
+      "entry_id": "nah_005",
+      "spanish": "Aquí está mi credencial oficial y mi CURP.",
+      "spanish_simple": "Aquí está mi credencial INE y mi CURP.",
+      "indigenous_text": "Nikan kahki noixneskayotl uan noCURP",
+      "phonetic_guide": "Ni-kan kaj-ki no-ish-nes-ka-yotl wan no-curp",
+      "domain_tag": "identidad",
+      "audio_clip": "assets/audio/nah_005.opus",
+      "keywords": ["credencial", "ine", "curp", "identificacion"]
+    },
+    {
+      "entry_id": "nah_006",
+      "spanish": "Tengo cita médica en la clínica del IMSS.",
+      "spanish_simple": "Tengo cita con el doctor en la clínica del IMSS.",
+      "indigenous_text": "Nikpiya notekitilis itech tepahtiloyan IMSS",
+      "phonetic_guide": "Nik-pi-ya no-te-ki-ti-lis i-tech te-paj-ti-lo-yan IMSS",
+      "domain_tag": "salud",
+      "audio_clip": "assets/audio/nah_006.opus",
+      "keywords": ["cita", "medica", "imss", "clinica", "doctor"]
+    },
+    {
+      "entry_id": "nah_007",
+      "spanish": "¿Cuánto tengo que pagar o es gratuito?",
+      "spanish_simple": "¿Este trámite cuesta dinero o es gratis?",
+      "indigenous_text": "¿Keski moneki niktlahtlani oso amo kipiya ipati?",
+      "phonetic_guide": "Kes-ki mo-ne-ki nik-tlaj-tla-ni o-so a-mo ki-pi-ya i-pa-ti",
+      "domain_tag": "pago",
+      "audio_clip": "assets/audio/nah_007.opus",
+      "keywords": ["cuanto", "pagar", "costo", "gratis", "gratuito", "derechos"]
+    },
+    {
+      "entry_id": "nah_008",
+      "spanish": "Necesito una persona intérprete en mi lengua.",
+      "spanish_simple": "Necesito que alguien hable mi idioma para ayudarme.",
+      "indigenous_text": "Nikneki se tlahkuilolnamikini tlen tlahtoa notlahtol",
+      "phonetic_guide": "Nik-ne-ki se tlaj-kui-lol-na-mi-ki-ni tlen tlaj-to-a no-tlaj-tol",
+      "domain_tag": "ventanilla",
+      "audio_clip": "assets/audio/nah_008.opus",
+      "keywords": ["interprete", "traductor", "lengua", "idioma", "nahuatl"]
+    },
+    {
+      "entry_id": "nah_009",
+      "spanish": "Vengo a solicitar la pensión para adulto mayor.",
+      "spanish_simple": "Vengo a pedir el apoyo de pensión para adulto mayor.",
+      "indigenous_text": "Niuala niktehtemohua in tomin palehuilistli para ueuetkej",
+      "phonetic_guide": "Ni-wa-la nik-tej-te-mo-wa in to-min pa-le-wi-lis-tli pa-ra we-wet-kej",
+      "domain_tag": "pago",
+      "audio_clip": "assets/audio/nah_009.opus",
+      "keywords": ["pension", "adulto", "mayor", "apoyo", "bienestar"]
+    },
+    {
+      "entry_id": "nah_010",
+      "spanish": "Muchas gracias, ¿qué día regreso por mi papel?",
+      "spanish_simple": "Muchas gracias, ¿cuándo regreso a recoger mi documento?",
+      "indigenous_text": "Tlasohkamati miak, ¿tlen tonali nimokuepas para noamatl?",
+      "phonetic_guide": "Tla-soj-ka-ma-ti miak, tlen to-na-li ni-mo-kwe-pas pa-ra no-a-matl",
+      "domain_tag": "saludo",
+      "audio_clip": "assets/audio/nah_010.opus",
+      "keywords": ["gracias", "cuando", "regreso", "recoger", "dia"]
+    }
+  ]
+}

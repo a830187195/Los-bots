@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#1E3A5F" />
+  <meta name="description" content="Mi Trámite Justo — Acompañamiento ciudadano accesible, traducción en lenguas originarias y guías paso a paso sin conexión." />
+  <title>Mi Trámite Justo</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" type="image/png" href="./assets/branding/logo.png" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="header-left">
+      <button id="btn-back" class="btn-header-nav hidden" type="button" aria-label="Volver al inicio">
+        &larr; Inicio
+      </button>
+      <h1 id="header-title" class="header-title">Mi Trámite Justo</h1>
+    </div>
+    <div class="header-controls" aria-label="Tamaño de letra">
+      <button id="btn-font-dec" class="btn-font" type="button" aria-label="Reducir tamaño de letra">A-</button>
+      <button id="btn-font-inc" class="btn-font" type="button" aria-label="Aumentar tamaño de letra">A+</button>
+    </div>
+  </header>
+
+  <div class="status-strip">
+    <div id="network-pill" class="network-pill offline" role="status" aria-live="polite">
+      Verificando conexión...
+    </div>
+  </div>
+
+  <main id="app-main" class="app-main" tabindex="-1">
+    <!-- Vista 0: Inicio -->
+    <section id="view-home" class="view active" aria-labelledby="home-welcome-title">
+      <article class="card brand-card">
+        <img src="./assets/branding/logo.png" alt="Logotipo Mi Trámite Justo" class="brand-logo" />
+        <div>
+          <h2 id="home-welcome-title">Tu guía clara para trámites oficiales</h2>
+          <p class="text-secondary">Funciona sin internet. Toca un botón grande para empezar o pulsa Escuchar.</p>
+        </div>
+      </article>
+
+      <button class="btn-speaker" type="button" data-speak-target="home" aria-label="Escuchar">
+        &#128266; Escuchar opciones de inicio
+      </button>
+
+      <nav class="hub-grid" aria-label="Módulos principales">
+        <a href="#translator" class="hub-tile" role="button">
+          <span class="tile-icon" aria-hidden="true">&#127760;</span>
+          <strong>1. Lenguas Originarias</strong>
+          <span>Español &harr; Náhuatl / Totonaco</span>
+        </a>
+        <a href="#scanner" class="hub-tile" role="button">
+          <span class="tile-icon" aria-hidden="true">&#128196;</span>
+          <strong>2. Leer Documento</strong>
+          <span>Explica papeles en palabras claras</span>
+        </a>
+        <a href="#offline" class="hub-tile" role="button">
+          <span class="tile-icon" aria-hidden="true">&#128229;</span>
+          <strong>3. Modo Sin Conexión</strong>
+          <span>Guías guardadas para usar sin internet</span>
+        </a>
+        <a href="#guide" class="hub-tile" role="button">
+          <span class="tile-icon" aria-hidden="true">&#9989;</span>
+          <strong>4. Guía Paso a Paso</strong>
+          <span>Acompañamiento interactivo</span>
+        </a>
+      </nav>
+    </section>
+
+    <!-- Vista 1: Puente Lingüístico -->
+    <section id="view-translator" class="view" aria-labelledby="translator-title">
+      <h2 id="translator-title" class="section-heading">Puente Lingüístico</h2>
+
+      <article class="card">
+        <p class="card-label">1. Elige la lengua originaria:</p>
+        <div id="lang-selector-row" class="btn-row"></div>
+        <button id="btn-toggle-dir" class="btn-olive" type="button">
+          Dirección: Español &rarr; Náhuatl
+        </button>
+      </article>
+
+      <article class="card">
+        <label for="translator-input" class="card-label">2. Escribe o dicta lo que deseas decir:</label>
+        <textarea id="translator-input" class="input-area" rows="3">Buenos días, vengo a mi trámite.</textarea>
+        <div class="btn-row">
+          <button id="btn-mic" class="btn-outline" type="button">&#127908; Hablar</button>
+          <button id="btn-translate" class="btn-primary" type="button">Traducir ahora</button>
+        </div>
+      </article>
+
+      <article class="card highlight-card" aria-live="polite">
+        <p id="tr-engine-badge" class="badge-olive">Diccionario guardado en tu teléfono</p>
+        <p id="tr-output-text" class="result-big">Niltze, nika' notlahtol</p>
+        <p id="tr-phonetic" class="text-secondary">Pronunciación aproximada: Nil-tse, ni-ka no-tlaj-tol</p>
+        <p id="tr-note" class="text-small">Datos demostrativos pendientes de validación comunitaria.</p>
+        <button id="btn-speak-translation" class="btn-speaker" type="button" aria-label="Escuchar">
+          &#128266; Escuchar traducción
+        </button>
+      </article>
+
+      <article class="card">
+        <p class="card-label">Frases rápidas para ventanilla (toca una):</p>
+        <div id="quick-phrases-list" class="stack-list"></div>
+      </article>
+    </section>
+
+    <!-- Vista 2: Intérprete de Documentos -->
+    <section id="view-scanner" class="view" aria-labelledby="scanner-title">
+      <h2 id="scanner-title" class="section-heading">Intérprete de Documentos</h2>
+
+      <article class="card privacy-banner">
+        <p><strong>Privacidad protegida:</strong> Tus fotografías y datos personales (CURP, nombres) se analizan solo en este dispositivo y nunca se envían a internet.</p>
+      </article>
+
+      <article class="card">
+        <p class="card-label">1. Toma foto o sube una imagen de tu papel:</p>
+        <div class="btn-row">
+          <label class="btn-primary file-btn">
+            &#128247; Tomar Foto
+            <input id="input-camera" type="file" accept="image/*" capture="environment" class="sr-only" />
+          </label>
+          <label class="btn-olive file-btn">
+            &#128444; Elegir Imagen
+            <input id="input-gallery" type="file" accept="image/*" class="sr-only" />
+          </label>
+        </div>
+        <canvas id="ocr-canvas" class="hidden" aria-hidden="true"></canvas>
+
+        <p class="card-label">O prueba al instante con ejemplos:</p>
+        <div id="sample-docs-list" class="stack-list"></div>
+
+        <label for="manual-doc-text" class="card-label">También puedes pegar texto difícil de un papel:</label>
+        <textarea id="manual-doc-text" class="input-area" rows="3" placeholder="Ejemplo: Acreditar personalidad jurídica mediante identificación oficial vigente..."></textarea>
+        <button id="btn-analyze-text" class="btn-primary" type="button">Explicar texto en palabras sencillas</button>
+      </article>
+
+      <article id="doc-result-card" class="card highlight-card" aria-live="polite">
+        <p id="doc-badge" class="badge-warning">ACCIÓN: CONSERVAR ORIGINAL Y ENTREGAR COPIA</p>
+        <h3 id="doc-title" class="result-big">Identificado: Acta de Nacimiento</h3>
+        <p id="doc-purpose"></p>
+        <p id="doc-action" class="text-secondary"></p>
+        <p id="doc-clauses" class="text-olive"></p>
+        <button id="btn-speak-doc" class="btn-speaker" type="button" aria-label="Escuchar">
+          &#128266; Escuchar explicación clara
+        </button>
+        <button id="btn-doc-start-guide" class="btn-primary" type="button">
+          Iniciar Guía Paso a Paso de este trámite
+        </button>
+      </article>
+    </section>
+
+    <!-- Vista 3: Modo Sin Conexión -->
+    <section id="view-offline" class="view" aria-labelledby="offline-title">
+      <h2 id="offline-title" class="section-heading">Modo Sin Conexión</h2>
+
+      <article class="card tinted-card">
+        <p class="card-label">Guías listas aunque no tengas señal</p>
+        <p class="text-secondary">Descarga los trámites aquí y podrás abrirlos, escucharlos y marcar cada paso en Modo Avión.</p>
+        <button id="btn-toggle-airplane" class="btn-olive" type="button">
+          Probar sin internet (Simular Modo Avión)
+        </button>
+        <button class="btn-speaker" type="button" data-speak-target="offline" aria-label="Escuchar">
+          &#128266; Escuchar estado sin conexión
+        </button>
+      </article>
+
+      <div id="offline-feedback" class="card success-banner hidden" aria-live="polite"></div>
+      <div id="offline-packs-list" class="stack-list"></div>
+    </section>
+
+    <!-- Vista 4: Guía Interactiva Paso a Paso -->
+    <section id="view-guide" class="view" aria-labelledby="guide-title">
+      <h2 id="guide-title" class="section-heading">Guía Paso a Paso</h2>
+
+      <article class="card">
+        <p class="card-label">Elige el trámite que vas a hacer:</p>
+        <div id="guide-pack-selector" class="stack-list"></div>
+      </article>
+
+      <article class="card">
+        <p id="guide-progress-label" class="card-label">Progreso: Paso 1 de 4</p>
+        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25">
+          <div id="guide-progress-fill" class="progress-fill" style="width: 25%"></div>
+        </div>
+      </article>
+
+      <article id="guide-step-card" class="card highlight-card" aria-live="polite">
+        <div class="step-header-row">
+          <img id="guide-pictogram-img" src="./assets/svg/documents.svg" alt="Ilustración del paso" class="step-svg" />
+          <div>
+            <p id="guide-cost-badge" class="badge-olive">Paso 1 de 4</p>
+            <h3 id="guide-step-title" class="result-big">Reunir Papeles</h3>
+          </div>
+        </div>
+
+        <p id="guide-step-instruction" class="step-instruction"></p>
+        <div id="guide-indigenous-box" class="tinted-box"></div>
+        <div id="guide-interactive-box" class="stack-list"></div>
+
+        <button id="btn-speak-step" class="btn-speaker" type="button" aria-label="Escuchar">
+          &#128266; Escuchar instrucciones de este paso
+        </button>
+
+        <p id="guide-validation-msg" class="validation-msg hidden" role="alert"></p>
+
+        <div class="btn-row">
+          <button id="btn-step-prev" class="btn-outline" type="button">&larr; Anterior</button>
+          <button id="btn-step-next" class="btn-primary" type="button">Siguiente &rarr;</button>
+        </div>
+        <button id="btn-step-reset" class="btn-ghost" type="button">Reiniciar trámite desde el paso 1</button>
+      </article>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

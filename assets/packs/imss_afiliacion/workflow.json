@@ -1,0 +1,103 @@
+{
+  "pack_id": "imss_afiliacion",
+  "title": "Afiliación y Cita Médica IMSS",
+  "category": "Salud y Seguridad Social",
+  "version": "1.0.0",
+  "estimated_time": "45 a 90 minutos",
+  "cost_summary": "100% Gratuito para derechohabientes",
+  "initial_state": "S01",
+  "states": [
+    {
+      "state_id": "S01",
+      "step_number": 1,
+      "title": "Reunir Documentos Clínicos",
+      "citizen_instruction": "Lleva tu CURP, Número de Seguridad Social (NSS), identificación INE, comprobante de domicilio y 2 fotos tamaño infantil.",
+      "pictogram_id": "documents",
+      "checklist_items": [
+        "CURP impresa y Número de Seguridad Social (NSS)",
+        "Identificación oficial vigente (original y copia)",
+        "Comprobante de domicilio reciente (menor a 3 meses)",
+        "2 fotografías tamaño infantil (solo para alta de cartilla)"
+      ],
+      "translations": {
+        "nah_puebla": "Xiksentili moCURP, moNSS, moINE uan amatl kanin tichanti para tepahtiloyan IMSS.",
+        "tot_sierra": "Katsokgo mi CURP, NSS, INE chu papil niku wilat para nak clínica IMSS."
+      },
+      "audio_script_es": "Paso uno: Reunir documentos para el IMSS. Necesitas tu CURP, tu número de seguridad social, credencial oficial, comprobante de domicilio y dos fotografías tamaño infantil si vas por tu cartilla.",
+      "next_transition": {
+        "target_state": "S02",
+        "condition": "checklist_complete",
+        "label": "Documentos listos"
+      },
+      "prev_state": null,
+      "is_terminal": false
+    },
+    {
+      "state_id": "S02",
+      "step_number": 2,
+      "title": "Ubicar tu Clínica (UMF)",
+      "citizen_instruction": "Acude al módulo de Archivo Clínico en la Unidad de Medicina Familiar que corresponde a tu código postal.",
+      "pictogram_id": "office_map",
+      "checklist_items": [],
+      "office_options": [
+        "UMF No. 1 Paseo Bravo / Centro Puebla",
+        "UMF No. 6 Puebla Sur / Agua Santa",
+        "Hospital Rural IMSS-Bienestar (Zacapoaxtla / Chiautla)"
+      ],
+      "translations": {
+        "nah_puebla": "Xitlapehpeni mopalehuiloyan clínica UMF tlen mitznamiki.",
+        "tot_sierra": "Kalakpuwanti clínica IMSS nema lakgchan nak mi kachikin."
+      },
+      "audio_script_es": "Paso dos: Ubicar tu clínica. Selecciona la Unidad de Medicina Familiar o Hospital Rural IMSS-Bienestar que te corresponde.",
+      "next_transition": {
+        "target_state": "S03",
+        "condition": "office_selected",
+        "label": "Confirmar clínica"
+      },
+      "prev_state": "S01",
+      "is_terminal": false
+    },
+    {
+      "state_id": "S03",
+      "step_number": 3,
+      "title": "Registrar en Archivo y Turno",
+      "citizen_instruction": "Pasa a Archivo Clínico para recibir tu Cartilla Nacional de Salud y turno de consulta (trámite gratuito).",
+      "pictogram_id": "window_officer",
+      "checklist_items": [
+        "Entregué mis copias en Archivo Clínico",
+        "Me asignaron consultorio y turno (matutino o vespertino)"
+      ],
+      "translations": {
+        "nah_puebla": "Xiktemaka moamatl itech archivo uan xikselis mocartilla.",
+        "tot_sierra": "Kamaxki mi papil nak archivo chu kamakglhtiti mi cartilla."
+      },
+      "audio_script_es": "Paso tres: Registro en Archivo Clínico. Entrega tus copias, solicita tu número de consultorio y confirma si tu turno es en la mañana o en la tarde.",
+      "next_transition": {
+        "target_state": "S04",
+        "condition": "payment_or_exempt",
+        "label": "Confirmar registro gratuito"
+      },
+      "prev_state": "S02",
+      "is_terminal": false
+    },
+    {
+      "state_id": "S04",
+      "step_number": 4,
+      "title": "Finalizar con Cartilla Lista",
+      "citizen_instruction": "Guarda tu Cartilla de Salud con tu consultorio anotado. Llega 15 minutos antes el día de tu cita.",
+      "pictogram_id": "check_done",
+      "checklist_items": [
+        "Tengo mi cartilla sellada con número de consultorio",
+        "Anoté la fecha y hora de mi próxima cita"
+      ],
+      "translations": {
+        "nah_puebla": "Xikpia kuali mocartilla uan xiyauh 15 minutos achto ke mocita.",
+        "tot_sierra": "Kapixti tlan mi cartilla chu kachin 15 minutos nina chankat mi cita."
+      },
+      "audio_script_es": "Paso cuatro: Finalizar. Ya tienes tu cartilla lista. Recuerda llegar quince minutos antes a tu consultorio el día de tu cita médica.",
+      "next_transition": null,
+      "prev_state": "S03",
+      "is_terminal": true
+    }
+  ]
+}

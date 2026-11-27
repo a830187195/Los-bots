@@ -1,0 +1,100 @@
+{
+  "pack_id": "curp_tramite",
+  "title": "Trámite y Corrección de CURP",
+  "category": "Identidad y Registro Nacional",
+  "version": "1.0.0",
+  "estimated_time": "20 a 45 minutos",
+  "cost_summary": "100% Gratuito en todo México",
+  "initial_state": "S01",
+  "states": [
+    {
+      "state_id": "S01",
+      "step_number": 1,
+      "title": "Reunir Papeles",
+      "citizen_instruction": "Necesitas tu Acta de Nacimiento legible y una identificación oficial con foto (original y copia).",
+      "pictogram_id": "documents",
+      "checklist_items": [
+        "Acta de nacimiento legible (original y copia)",
+        "Identificación oficial con fotografía (INE, Cartilla o Pasaporte)"
+      ],
+      "translations": {
+        "nah_puebla": "Xikualika motlakatilis amatl uan moINE para tikchihuas moCURP.",
+        "tot_sierra": "Kalhmin mi acta de nacimiento chu mi credencial INE."
+      },
+      "audio_script_es": "Paso uno: Reunir papeles. Para sacar o corregir tu CURP necesitas llevar tu acta de nacimiento y una identificación oficial con fotografía. Este trámite es totalmente gratuito.",
+      "next_transition": {
+        "target_state": "S02",
+        "condition": "checklist_complete",
+        "label": "Ya tengo mis papeles"
+      },
+      "prev_state": null,
+      "is_terminal": false
+    },
+    {
+      "state_id": "S02",
+      "step_number": 2,
+      "title": "Ubicar Módulo RENAPO",
+      "citizen_instruction": "Elige el módulo de atención de CURP o Registro Civil más cercano a tu localidad.",
+      "pictogram_id": "office_map",
+      "checklist_items": [],
+      "office_options": [
+        "Módulo Estatal RENAPO Puebla (Centro Integral de Servicios)",
+        "Oficialía del Registro Civil Municipal",
+        "Módulo de Atención Rural / Presidencia Municipal"
+      ],
+      "translations": {
+        "nah_puebla": "Xitlapehpeni kanin kahki módulo RENAPO tlen okachi nechka.",
+        "tot_sierra": "Kalakpuwanti módulo RENAPO nema tlakg lakatsu."
+      },
+      "audio_script_es": "Paso dos: Ubicar módulo. Elige la oficina donde quieres realizar la impresión o corrección de tu CURP.",
+      "next_transition": {
+        "target_state": "S03",
+        "condition": "office_selected",
+        "label": "Confirmar módulo"
+      },
+      "prev_state": "S01",
+      "is_terminal": false
+    },
+    {
+      "state_id": "S03",
+      "step_number": 3,
+      "title": "Entregar en Ventanilla (Gratis)",
+      "citizen_instruction": "Muestra tus documentos para cotejo. Recuerda que nadie debe cobrarte por la CURP.",
+      "pictogram_id": "window_officer",
+      "checklist_items": [
+        "Mostré mis documentos en ventanilla sin pagar cuota"
+      ],
+      "translations": {
+        "nah_puebla": "Xiktemaka moamatl, inin tekichihualistli amo kipiya ipati.",
+        "tot_sierra": "Kamaxki mi papil, uma trámite ni lakgchan tumin."
+      },
+      "audio_script_es": "Paso tres: Entregar en ventanilla. El personal verificará tus datos contra tu acta de nacimiento. El trámite es gratuito.",
+      "next_transition": {
+        "target_state": "S04",
+        "condition": "payment_or_exempt",
+        "label": "Trámite gratuito confirmado"
+      },
+      "prev_state": "S02",
+      "is_terminal": false
+    },
+    {
+      "state_id": "S04",
+      "step_number": 4,
+      "title": "Finalizar y Verificar Leyenda",
+      "citizen_instruction": "Confirma que tu hoja diga 'CURP certificada: verificada con el Registro Civil'.",
+      "pictogram_id": "check_done",
+      "checklist_items": [
+        "La hoja tiene la leyenda CURP certificada",
+        "Mis datos coinciden con mi acta de nacimiento"
+      ],
+      "translations": {
+        "nah_puebla": "Xikita intla moCURP kihtoa certificada uan melahuak motoka.",
+        "tot_sierra": "Kaakxilhti tlan wan CURP certificada chu tlan wilh mi tukuy."
+      },
+      "audio_script_es": "Paso cuatro: Finalizar. Revisa que tu constancia impresa diga CURP certificada verificada con el Registro Civil y guárdala sin doblar el código QR.",
+      "next_transition": null,
+      "prev_state": "S03",
+      "is_terminal": true
+    }
+  ]
+}

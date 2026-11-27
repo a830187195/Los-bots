@@ -1,0 +1,102 @@
+{
+  "pack_id": "acta_nacimiento",
+  "title": "Acta de Nacimiento (Copia Certificada)",
+  "category": "Identidad y Registro Civil",
+  "version": "1.1.0",
+  "estimated_time": "30 a 60 minutos en ventanilla",
+  "cost_summary": "Aprox. $185 MXN (o gratuito con exención en jornada comunitaria)",
+  "initial_state": "S01",
+  "states": [
+    {
+      "state_id": "S01",
+      "step_number": 1,
+      "title": "Reunir Papeles",
+      "citizen_instruction": "Junta tu credencial INE (original y copia) y una copia de tu CURP o acta anterior.",
+      "pictogram_id": "documents",
+      "checklist_items": [
+        "Credencial oficial INE o pasaporte (original para mostrar)",
+        "Copia fotostática clara de tu identificación",
+        "Tu CURP anotada o copia de acta anterior (si la tienes)"
+      ],
+      "translations": {
+        "nah_puebla": "Xiksentili moINE uan moCURP itekopio para tiyas ipan tekichihualoyan.",
+        "tot_sierra": "Katsokgo mi credencial chu mi CURP para nataputsay nak oficina."
+      },
+      "audio_script_es": "Paso uno: Reunir papeles. Lleva tu credencial oficial en original para que la revisen y una fotocopia clara. También ten a la mano tu CURP.",
+      "next_transition": {
+        "target_state": "S02",
+        "condition": "checklist_complete",
+        "label": "Ya tengo mis papeles"
+      },
+      "prev_state": null,
+      "is_terminal": false
+    },
+    {
+      "state_id": "S02",
+      "step_number": 2,
+      "title": "Ir a Ventanilla",
+      "citizen_instruction": "Elige la oficina del Registro Civil o kiosco más cercano y acude de lunes a viernes de 9:00 a 15:00 h.",
+      "pictogram_id": "office_map",
+      "checklist_items": [],
+      "office_options": [
+        "Registro Civil Central Puebla (Av. 11 Oriente 2003)",
+        "Juzgado del Registro Civil - Cuetzalan / Sierra Norte",
+        "Kiosco Digital Municipal / Presidencia Auxiliar"
+      ],
+      "translations": {
+        "nah_puebla": "Xitlapehpeni kanin tiyas ipan Registro Civil tlen okachi nechka.",
+        "tot_sierra": "Kalakpuwanti nak Registro Civil nema tlakg lakatsu wilh."
+      },
+      "audio_script_es": "Paso dos: Ir a ventanilla. Selecciona la oficina del Registro Civil más cercana a tu comunidad y revisa el horario de atención de nueve de la mañana a tres de la tarde.",
+      "next_transition": {
+        "target_state": "S03",
+        "condition": "office_selected",
+        "label": "Confirmar sede elegida"
+      },
+      "prev_state": "S01",
+      "is_terminal": false
+    },
+    {
+      "state_id": "S03",
+      "step_number": 3,
+      "title": "Entregar y Pagar Derechos",
+      "citizen_instruction": "Entrega tus copias en ventanilla, paga en caja autorizada o solicita constancia de exención gratuita.",
+      "pictogram_id": "payment",
+      "checklist_items": [
+        "Entregué mis copias sin dejar mi credencial original",
+        "Obtuve mi recibo de pago o sello de trámite gratuito"
+      ],
+      "translations": {
+        "nah_puebla": "Xikmaka itekopio uan xikpia morecibo oso amatl tlen amo kipiya ipati.",
+        "tot_sierra": "Kamaxki copias chu kapixti mi recibo o papil nema ni lakgchan tumin."
+      },
+      "audio_script_es": "Paso tres: Entregar documentos y pagar derechos. Muestra tu original y entrega solo la copia. Paga en la caja oficial o pregunta si aplicas para entrega gratuita.",
+      "next_transition": {
+        "target_state": "S04",
+        "condition": "payment_or_exempt",
+        "label": "Confirmar pago o exención"
+      },
+      "prev_state": "S02",
+      "is_terminal": false
+    },
+    {
+      "state_id": "S04",
+      "step_number": 4,
+      "title": "Finalizar Trámite",
+      "citizen_instruction": "Revisa antes de irte que tu nombre, apellidos y fecha de nacimiento estén bien escritos en tu nueva acta.",
+      "pictogram_id": "check_done",
+      "checklist_items": [
+        "Revisé que mi nombre y fecha no tengan errores",
+        "Guardé mi acta certificada y mi credencial original"
+      ],
+      "translations": {
+        "nah_puebla": "Xikita kuali intla motoka uan motlakatilis kuali ihkuiliuhtok. Tlasohkamati!",
+        "tot_sierra": "Kaakxilhti tlan tsokgni mi tukuy. ¡Kgalhtawakganti mi trámite!"
+      },
+      "audio_script_es": "Paso cuatro: Finalizar trámite. Antes de salir de la oficina, lee con calma que tu nombre completo y tu fecha de nacimiento estén escritos correctamente.",
+      "next_transition": null,
+      "prev_state": "S03",
+      "is_terminal": true
+    }
+  ]
+}

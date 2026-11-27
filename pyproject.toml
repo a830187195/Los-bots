@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mi-tramite-justo"
+version = "1.0.0"
+description = "Aplicación móvil Offline-First para inclusión digital ciudadana (Español <-> Náhuatl/Totonaco, OCR local y guías FSM)."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "kivy>=2.3.0",
+    "pillow>=10.0.0",
+    "cryptography>=42.0.0",
+    "pyjnius>=1.6.1; sys_platform == 'linux'",
+    "plyer>=2.1.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.ruff]
+line-length = 110
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/build_packs.py" = ["E402"]
+
+[tool.mypy]
+python_version = "3.10"
+ignore_missing_imports = true
+strict = false
